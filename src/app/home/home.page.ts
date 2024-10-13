@@ -37,10 +37,15 @@ export class HomePage {
       popupAnchor: [-3, -76] // Titik popup
   });
 
-  // Tambahkan marker dengan ikon kustom
-  L.marker([51.505, -0.09], { icon: customIcon }).addTo(this.map)
-      .bindPopup('Hai Semuanya!')
-      .openPopup();
+ // Tambahkan marker dengan ikon kustom
+L.marker([51.505, -0.09], { icon: customIcon }).addTo(this.map)
+    .bindPopup(`
+        <div>
+            <p>Hai Semuanya!</p>
+            <img src="assets/icon/favicon.png" alt="Foto Toko" style="width:150px;height:auto;margin-top:5px;">
+        </div>
+    `)
+    .openPopup();
 
     // Define basemap options
     const baseMaps = {
